@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void gen_rand_10_num_by_table() {
+    srand(time(0));
+
+    int i, n, counter[10] = {0};
+    for (i = 1; i <= 10; i++) {
+        do {
+            n = rand() % 10 + 1;
+        } while (counter[n - 1] != 0);
+
+        printf("%d ", n);
+        counter[n - 1]++;
+    }
+}
+
+void main() {
+    gen_rand_10_num_by_table();
+}

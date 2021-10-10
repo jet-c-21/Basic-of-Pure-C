@@ -44,4 +44,7 @@ void my_bubble_sort() {
     // <<< Sort <<<
 }
 
-void main() { my_bubble_sort(); }
+int main() {
+    my_bubble_sort();
+    return 0;
+}
